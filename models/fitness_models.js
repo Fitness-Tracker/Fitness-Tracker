@@ -4,14 +4,16 @@ var orm = require("../config/orm.js");
 var fitness = {
 
 insertBiometrics: function(columns, columnValues, cb) {
-    orm.insertOne("biometrics", columns, columnValues, function(res) {
+  console.log(columns);
+  console.log(columnValues);
+    orm.insert("biometrics", columns, columnValues, function(res) {
       cb(res);
     });
   },
   
   
 insertWorkoutdata: function(columns, columnValues, cb) {
-    orm.insertOne("workoutdata", columns, columnValues, function(res) {
+    orm.insert("workoutdata", columns, columnValues, function(res) {
       cb(res);
     });
   },

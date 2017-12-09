@@ -9,7 +9,7 @@ function printQuestionMarks(num) {
     }
   
     return arr.toString();
-  };
+  }
   
   // Helper function to convert object key/value pairs to SQL syntax
   function objToSql(ob) {
@@ -36,7 +36,9 @@ function printQuestionMarks(num) {
 
 
   var orm = {
-    insertOne: function (tableName, columns, columnValues, cb) {
+    insert: function (tableName, columns, columnValues, cb) {
+      console.log("orm");
+      console.log(columnValues);
         var queryString = "INSERT INTO " + tableName;
     
         queryString += " (";

@@ -26,7 +26,7 @@ CREATE TABLE profiles(
 CREATE TABLE biometrics(
   biometrics_id INT NOT NULL AUTO_INCREMENT,
   user_id int NOT NULL,
-  date DATE,
+  date CURRENT_TIMESTAMP,
   weight FLOAT NOT NULL,
   body_fat FLOAT NOT NULL,
   muscle_mass FLOAT NOT NULL,
@@ -47,3 +47,8 @@ CREATE TABLE workoutdata(
   PRIMARY KEY (workout_id,date),
   FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+
+
+
+select * FROM biometrics;
