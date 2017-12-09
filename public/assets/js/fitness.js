@@ -1,6 +1,6 @@
 $(function () {
 
-    $(".page2-form").on("submit", function (event) {
+    $("#page2-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
@@ -9,7 +9,9 @@ $(function () {
             bodyFat: $("#bf").val().trim(),
             muscleMass: $("#mm").val().trim(),
             bodyWater: $("#bw").val().trim(),
-            boneMass: $("#bm").val().trim()
+            boneMass: $("#bm").val().trim(),
+            user: $("#user").val().trim(),
+            date: $("#date").val().trim()
         };
         console.log(biometrics);
         // Send the POST request.
@@ -18,7 +20,7 @@ $(function () {
             data: biometrics
         }).then(
             function () {
-                console.log("created new biomeetrics");
+                console.log("created new biometrics");
                 // Reload the page to get the updated list
                 res.redirect("/excer");
             }
