@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iFittracker</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="assets/images/plate.png" height="32px" width="32px">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
+    <!-- certain animations for pics <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- jumbotron-->
+    <div class="row">
+        <div class="jumbotron clearfix">
+            <div class="col-md-4">
+                <img id="trainer1" src="assets/images/trainer1.png" />
+            </div>
+            <div class="col-md-4">
+                <h1 class="title"><span class="color-white">i</span><span class="color-red">Fittracker</span></h1>
+            </div>
+            <div class="col-md-4">
+                <img id="trainer2" src="assets/images/trainer2.png" />
+            </div>
+        </div>
+    </div>
+    <!-- end of Jumbotron -->
+    <div class="container clearfix">
+        <div class="row">
+         <div class="well well-lg">
+            <form action="" id="dataEntry">
+                <div class="form-group">
+                    <label for="sel1">Exercise:</label>
+                    <select class="form-control" id="sel1" name="Exercise">
+                        <option>Bench</option>
+                        <option>Squat</option>
+                        <option>Deadlift</option>
+                        <option>Military</option>
+                        <option>Curls</option>                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="load">Weight:</label>                    
+                    <input class="form-control" type="text" id="load" name='load' placeholder="Enter the amount of weight." />
+                </div>
+                <div class="form-group">
+                    <label for="load">Repetitions:</label>                   
+                    <input class="form-control" type="text" id="Repetitions" name='Repetitions' placeholder="How many repetitions?"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-def btn-block" id="submit">Enter Data</button>
+                </div>
+               
+            </form>
+            </div>
+            <!--end of well -->
+        </div>
+        <!--end of row-->
+        <div class="row">
+        <h2>Your Workout History</h2>          
+  <table class="table table-condensed table-responsive">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Exercise</th>
+        <th>Weight</th>
+        <th>Reps</th>
+        <th>Total Weight</th>
+        <th>Average Weight</th>
+        <th>My Weight</th>
+        <th>Fat %</th>
+        <th>Bodywater %</th> 
+        <th>Muscle Mass %</th>
+        <th>Bone Mass %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>7/10/16</td>
+        <td>Bench</td>
+        <td>105</td>
+        <td>10</td>
+        <td>1050</td>
+        <td>105</td>
+        <td>197</td>
+        <td>15%</td>
+        <td>64.6%</td>
+        <td>43%</td>
+        <td>8.8%</td>
+      </tr>
+      <tr>
+        <td>7/11/16</td>
+        <td>squat</td>
+        <td>105</td>
+        <td>10</td>
+        <td>1050</td>
+        <td>105</td>
+        <td>197</td>
+        <td>15%</td>
+        <td>64.6%</td>
+        <td>43%</td>
+        <td>8.8%</td>
+      </tr>
+      </tbody>
+  </table>
+
+
+</div>
+<!--ends row-->
+    </div>
+    <!--end of container-->
+
+
+
+    
+    <footer class="container-fluid custom-footer clearfix">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Project Team</li>
+                        <li class="list-unstyled">Akhila Naik</li>
+                        <li class="list-unstyled">Eric Stanley</li>
+                        <li class="list-unstyled">Chae Kim</li>
+                        <li class="list-unstyled">John Shari</li>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+            <div class="col-md-4 legal">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Legal</li>
+                        <li class="list-unstyled">&#169 Project Team</li>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Links</li>
+                        <ul class="list-inline">
+                            <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+        </div>
+        <!-- end row -->
+    </footer>
+    <!-- end container fluid custom footer -->
+</body>
+
+</html>
