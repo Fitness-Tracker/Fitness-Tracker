@@ -1,0 +1,139 @@
+body {
+    background-color: white;
+}
+
+.container {
+    overflow: visible;
+}
+
+div.join {
+    height: 200px;
+    width: 450px;
+}
+
+div.login {
+    height: 200px;
+    width: 450px;
+}
+
+div.jumbotron {
+    background-image: url("../images/black_concrete.jpg");
+    height: 300px;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-red {
+    color: #eb1c24;
+}
+
+#trainer1 {
+    margin-left: 20%;
+}
+
+#trainer2 {
+    margin-left: 30%;
+}
+
+.title {
+    margin-top: 15%;
+    margin-left: 5%;
+    font-family: 'Vollkorn SC', serif;
+}
+
+h3.modTitle {
+    font-family: 'Vollkorn SC', serif;
+    text-align: center;
+}
+
+#enterData {
+    color: black;
+    background-color: #eb1c24;
+}
+
+#joinB {
+    color: black;
+    background-color: #eb1c24;
+}
+
+#loginB {
+    color: black;
+    background-color: #eb1c24;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+/* footer */
+
+.custom-footer {
+    background-image: url("../images/black_concrete.jpg");
+    background-attachment: fixed;
+    height: auto;
+    padding: 60px 0;
+}
+
+.footer-size {
+    font-size: 150%;
+    border-bottom: 1px solid #eb1c24;
+    margin: 0 0 10px 0;
+}
+
+.custom-icon {
+    font-size: 200%;
+}
+
+.list-inlined {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+/* dataEntry.html specific */
+
+#submit {
+  background-color: #eb1c24;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 560px) {
+    #trainer2 {
+        display: none;
+    }
+    .title {
+        display: none;
+    }
+
+    #trainer1 {
+        margin-left: 25%;
+    }
+
+    .well {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 561px) {
+    #trainer1 {
+        margin-left: 40%;
+    }
+    .title {
+        display: none;
+    }
+
+    #trainer2 {
+        display: none;
+    }
+}
