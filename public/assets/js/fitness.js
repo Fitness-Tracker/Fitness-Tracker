@@ -1,29 +1,30 @@
 $(function () {
 
-    $("#page2-form").on("submit", function (event) {
+    $("#modal-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
         var biometrics = {
             weight: $("#weight").val().trim(),
-            bodyFat: $("#bf").val().trim(),
-            muscleMass: $("#mm").val().trim(),
-            bodyWater: $("#bw").val().trim(),
-            boneMass: $("#bm").val().trim(),
-            user: $("#user").val().trim(),
-            date: $("#date").val().trim()
+            bodyFat: $("#bodyFat").val().trim(),
+            muscleMass: $("#muscleMass").val().trim(),
+            bodyWater: $("#bodyWater").val().trim(),
+            boneMass: $("#boneMass").val().trim()
+            // user: $("#user").val().trim(),
+            // date: $("#date").val().trim()
         };
         console.log(biometrics);
         // Send the POST request.
-        $.ajax("/api/biometrics", {
+        $.ajax("/biometrics", {
             type: "POST",
             data: biometrics
         }).then(
             function () {
                 console.log("created new biometrics");
                 // Reload the page to get the updated list
-                res.redirect("/excer");
+                window.location.href = "/excer";
             }
             );
     });
+
 });
