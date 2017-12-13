@@ -18,6 +18,12 @@ insertWorkoutdata: function(columns, columnValues, cb) {
     });
   },
 
+  all: function(cb) {
+    orm.all("workoutdata", function(res) {
+      cb(res);
+    });
+  }, 
+ 
 };
 
 

@@ -2,21 +2,24 @@
 <html>
 
 <head>
-    <title>iFit</title>
+    <title>iFittracker</title>
+     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="assets/images/plate.png" height="32px" width="32px">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--font???? <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
     <!-- certain animations for pics <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- More Fonts <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src='assets/javascript/app.js'></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/fitness.js"></script>
 </head>
 
 <body>
+    <!-- jumbotron-->
     <div class="row">
-        <div class="jumbotron">
+        <div class="jumbotron clearfix">
             <div class="col-md-4">
                 <img id="trainer1" src="assets/images/trainer1.png" />
             </div>
@@ -28,23 +31,24 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
+    <!-- end of Jumbotron -->
+    <div class="container clearfix">
+        <!-- Login -->
         <div class="row">
             <div class="login">
-                <div class="col-sm-12 col-md-10 col-md-offset-10">
+                <div class="col-sm-12 col-sm-offset-4 col-md-10 col-md-offset-10">
                     <div class="well well-lg">
                         <form action="" id="loginForm">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" name='username' placeholder="username" />
+                                <input class="form-control" type="text" id="username" name='username' placeholder="username" />
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input class="form-control" type="password" name='password' placeholder="password" />
+                                <input class="form-control" type="password" id="password" name='password' placeholder="password"/>
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-def btn-block">Login</button>
+                                <button type="button" class="btn btn-def btn-block" id="loginB">Login</button>
                             </div>
                             <div class="form-group text-center">
                                 <a href="#">Forgot Password</a>
@@ -54,30 +58,30 @@
                 </div>
             </div>
         </div>
-        <!-- end of row -->
+        <!-- end of row  & Login-->
         <div class="row">
             <div class="join">
-                <div class="col-sm-12 col-md-10 col-md-offset-10">
+                <div class="col-sm-12 col-sm-offset-4 col-md-10 col-md-offset-10">
                     <div class="well well-lg">
                         <form action="" id="joinForm">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" name='firstname' placeholder="first name" />
+                                <input class="form-control" type="text" id="firstname" name='firstname' placeholder="first name" />
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" name='lastname' placeholder="last name" />
+                                <input class="form-control" type="text" id="lastname" name='lastname' placeholder="last name" />
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input class="form-control" type="text" name='email' placeholder="email" />
+                                <input class="form-control" type="text" id="email" name='email' placeholder="email" />
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input class="form-control" type="password" name='password' placeholder="password" />
+                                <input class="form-control" type="password" id="password2" name='password' placeholder="password" />
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-def btn-block">Join!</button>
+                                <button type="button" id="joinB" class="btn btn-def btn-block">Join!</button>
                             </div>
                         </form>
                     </div>
@@ -85,10 +89,112 @@
             </div>
         </div>
         <!-- end of row -->
+    
     </div>
     <!-- end of container -->
-    </div>
-    <!-- end of container -->
-</body>
+    
 
+<!-- Modal -->
+<div class="container">
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h3 class="modTitle"><span class="color-red">Did you weigh yourself today?</span></h3>
+        </div>
+
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form" id="modal-form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="weight" placeholder="Weight?">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="bodyFat" placeholder="Body Fat %?">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="muscleMass" placeholder="Muscle Mass?">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="bodyWater" placeholder="Body Water?">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="boneMass" placeholder="Bone Mass?">
+            </div>
+              <button type="submit" class="btn btn-block" id="enterData">Enter Data</button>
+             
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div> 
+</div>
+ 
+
+
+<footer class="container-fluid custom-footer clearfix">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Project Team</li>
+                    <li class="list-unstyled">Akhila Naik</li>
+                    <li class="list-unstyled">Eric Stanley</li>
+                    <li class="list-unstyled">Chae Kim</li>
+                    <li class="list-unstyled">John Shari</li>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
+        <div class="col-md-4 legal">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Legal</li>
+                    <li class="list-unstyled">&#169 Project Team</li>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
+        <div class="col-md-4">
+            <div class="col-md-offset-3 col-md-6">
+                <ul class="color-white small">
+                    <li class="list-unstyled footer-size">Links</li>
+                    <ul class="list-inline">
+                        <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>    
+                    </ul>
+                </ul>
+            </div>
+            <!-- end col md offset 3 col md 6 -->
+        </div>
+        <!-- end col md 4 -->
+    </div>
+    <!-- end row -->
+</footer>
+<!-- end container fluid custom footer -->
+
+
+
+<script>
+$(document).ready(function(){
+    $("#loginB").click(function(){
+        $("#myModal").modal();
+    });
+    $("#joinB").click(function(){
+        $("#myModal").modal();
+    });
+
+
+});
+</script>
+
+</body>
 </html>
