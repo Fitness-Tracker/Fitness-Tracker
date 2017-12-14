@@ -3,7 +3,7 @@
 
 <head>
     <title>iFittracker</title>
-     <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="assets/images/plate.png" height="32px" width="32px">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input class="form-control" type="password" id="password" name='password' placeholder="password"/>
+                                <input class="form-control" type="password" id="password" name='password' placeholder="password" />
                             </div>
                             <div class="form-group">
                                 <button type="button" class="btn btn-def btn-block" id="loginB">Login</button>
@@ -81,6 +81,12 @@
                                 <input class="form-control" type="password" id="password2" name='password' placeholder="password" />
                             </div>
                             <div class="form-group">
+                                <select class="form-control" id="genderSelect" name="Gender">
+                                    <option><span class="glyphicon glyphicon-user"></span>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <button type="button" id="joinB" class="btn btn-def btn-block">Join!</button>
                             </div>
                         </form>
@@ -89,112 +95,96 @@
             </div>
         </div>
         <!-- end of row -->
-    
     </div>
     <!-- end of container -->
-    
-
-<!-- Modal -->
-<div class="container">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-          <h3 class="modTitle"><span class="color-red">Did you weigh yourself today?</span></h3>
+    <!-- Modal -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modTitle"><span class="color-red">Did you weigh yourself today?</span></h3>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" id="modal-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="weight" placeholder="Weight?">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="bodyFat" placeholder="Body Fat %?">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="muscleMass" placeholder="Muscle Mass?">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="bodyWater" placeholder="Body Water?">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="boneMass" placeholder="Bone Mass?">
+                            </div>
+                            <button type="submit" class="btn btn-block" id="enterData">Enter Data</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form" id="modal-form">
-            <div class="form-group">
-              <input type="text" class="form-control" id="weight" placeholder="Weight?">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="bodyFat" placeholder="Body Fat %?">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="muscleMass" placeholder="Muscle Mass?">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="bodyWater" placeholder="Body Water?">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="boneMass" placeholder="Bone Mass?">
-            </div>
-              <button type="submit" class="btn btn-block" id="enterData">Enter Data</button>
-             
-          </form>
-        </div>
-        
-      </div>
-      
     </div>
-  </div> 
-</div>
- 
-
-
-<footer class="container-fluid custom-footer clearfix">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="col-md-offset-3 col-md-6">
-                <ul class="color-white small">
-                    <li class="list-unstyled footer-size">Project Team</li>
-                    <li class="list-unstyled">Akhila Naik</li>
-                    <li class="list-unstyled">Eric Stanley</li>
-                    <li class="list-unstyled">Chae Kim</li>
-                    <li class="list-unstyled">John Shari</li>
-                </ul>
-            </div>
-            <!-- end col md offset 3 col md 6 -->
-        </div>
-        <!-- end col md 4 -->
-        <div class="col-md-4 legal">
-            <div class="col-md-offset-3 col-md-6">
-                <ul class="color-white small">
-                    <li class="list-unstyled footer-size">Legal</li>
-                    <li class="list-unstyled">&#169 Project Team</li>
-                </ul>
-            </div>
-            <!-- end col md offset 3 col md 6 -->
-        </div>
-        <!-- end col md 4 -->
-        <div class="col-md-4">
-            <div class="col-md-offset-3 col-md-6">
-                <ul class="color-white small">
-                    <li class="list-unstyled footer-size">Links</li>
-                    <ul class="list-inline">
-                        <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>    
+    <footer class="container-fluid custom-footer clearfix">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Project Team</li>
+                        <li class="list-unstyled">Akhila Naik</li>
+                        <li class="list-unstyled">Eric Stanley</li>
+                        <li class="list-unstyled">Chae Kim</li>
+                        <li class="list-unstyled">John Shari</li>
                     </ul>
-                </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
             </div>
-            <!-- end col md offset 3 col md 6 -->
+            <!-- end col md 4 -->
+            <div class="col-md-4 legal">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Legal</li>
+                        <li class="list-unstyled">&#169 Project Team</li>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Links</li>
+                        <ul class="list-inline">
+                            <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
         </div>
-        <!-- end col md 4 -->
-    </div>
-    <!-- end row -->
-</footer>
-<!-- end container fluid custom footer -->
+        <!-- end row -->
+    </footer>
+    <!-- end container fluid custom footer -->
+    <script>
+    $(document).ready(function() {
+        $("#loginB").click(function() {
+            $("#myModal").modal();
+        });
+        $("#joinB").click(function() {
+            $("#myModal").modal();
+        });
 
 
-
-<script>
-$(document).ready(function(){
-    $("#loginB").click(function(){
-        $("#myModal").modal();
     });
-    $("#joinB").click(function(){
-        $("#myModal").modal();
-    });
-
-
-});
-</script>
-
+    </script>
 </body>
+
 </html>
