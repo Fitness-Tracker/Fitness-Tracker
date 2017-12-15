@@ -1,32 +1,19 @@
-DROP DATABASE fitness_tracker;
-
 CREATE DATABASE fitness_tracker;
-
 
 CREATE TABLE users(
   user_id INT NOT NULL AUTO_INCREMENT,
-  user_name VARCHAR(255) NULL,
-  password VARCHAR(255) NULL,
-  date DATE,
-  PRIMARY KEY (user_id)
-);
-
-
-CREATE TABLE profiles(
-  profile_id INT NOT NULL AUTO_INCREMENT,
-  user_id int NOT NULL,
   first_name VARCHAR(255) NULL,
   last_name VARCHAR(255) NULL,
   gender VARCHAR(10),
-  PRIMARY KEY (profile_id),
-  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  user_name VARCHAR(255) NULL,
+  password VARCHAR(255) NULL,
+  PRIMARY KEY (user_id)
 );
-
 
 CREATE TABLE biometrics(
   biometrics_id INT NOT NULL AUTO_INCREMENT,
   user_id int NOT NULL,
-  date CURRENT_TIMESTAMP,
+  date DATE,
   weight FLOAT NOT NULL,
   body_fat FLOAT NOT NULL,
   muscle_mass FLOAT NOT NULL,
@@ -48,7 +35,7 @@ CREATE TABLE workoutdata(
   FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+select * from users;
+select * from biometrics;
+select * from workoutdata;
 
-
-
-select * FROM biometrics;

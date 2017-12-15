@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
+
 var routes = require("./controllers/fitness_controller.js");
 
 app.use("/", routes);

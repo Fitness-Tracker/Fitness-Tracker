@@ -25,7 +25,7 @@ router.post("/biometrics", function (req, res) {
   fitness.insertBiometrics([
     "user_id", "date", "weight", "body_fat", "muscle_mass", "body_water", "bone_mass"
   ], [
-      req.body.userid,  // userID to INSERT
+      1,  // userID to INSERT
       req.body.date,
       req.body.weight,
       req.body.bodyFat,
@@ -34,7 +34,6 @@ router.post("/biometrics", function (req, res) {
       req.body.boneMass,
     ], function (result) {
       console.log("insertBiometrics route completed");
-      console.log("req from biometrics post: " + req);
     });
 })
 
@@ -55,7 +54,9 @@ router.post("/loginUser", function (req, res) {
       console.log("loginPassword = " + loginPassword);
       if (req.body.password === loginPassword) {
         console.log("Login Successful");
-        res.json(result);
+        res.json({loginID: result[0].user_id});
+        console.log("loginID set = " + loginID);
+        // What do we want to do?
       } else { 
         console.log("Login Failed");
         var loginID = "";
@@ -70,7 +71,7 @@ router.post("/workoutdata", function (req, res) {
   fitness.insertWorkoutdata([
     "user_id", "date", "exercise", "exercise_weight", "reps"
   ], [
-      req.body.userid,  // userID to INSERT
+      1,  // userID to INSERT
       req.body.date,
       req.body.exercise,
       req.body.weight,
