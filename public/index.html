@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <title>iFittracker</title>
+    <title>iFitTracker</title>
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="assets/images/plate.png" height="32px" width="32px">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
     <!-- certain animations for pics <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/js/fitness.js"></script>
+    <script src="/assets/js/fitness.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,10 @@
                 <img id="trainer1" src="assets/images/trainer1.png" />
             </div>
             <div class="col-md-4">
-                <h1 class="title"><span class="color-white">i</span><span class="color-red">Fittracker</span></h1>
+                <h1 class="title">
+                    <span class="color-white">i</span>
+                    <span class="color-red">FitTracker</span>
+                </h1>
             </div>
             <div class="col-md-4">
                 <img id="trainer2" src="assets/images/trainer2.png" />
@@ -38,21 +42,25 @@
             <div class="login">
                 <div class="col-sm-12 col-sm-offset-4 col-md-10 col-md-offset-10">
                     <div class="well well-lg">
-                        <form action="" id="loginForm">
+                        <form id="loginForm">
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" id="username" name='username' placeholder="username" />
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input class="form-control" type="text" id="username" name='username' placeholder="Username" />
                             </div>
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input class="form-control" type="password" id="password" name='password' placeholder="password" />
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input class="form-control" type="password" id="password" name='password' placeholder="Password" />
                             </div>
                             <div class="form-group">
                                 <button type="button" class="btn btn-def btn-block" id="loginB">Login</button>
                             </div>
-                            <div class="form-group text-center">
+                            <!-- <div class="form-group text-center">
                                 <a href="#">Forgot Password</a>
-                            </div>
+                            </div>  Commented out Forgot Password...Version 2.0 -->
                         </form>
                     </div>
                 </div>
@@ -63,53 +71,73 @@
             <div class="join">
                 <div class="col-sm-12 col-sm-offset-4 col-md-10 col-md-offset-10">
                     <div class="well well-lg">
-                        <form action="" id="joinForm">
+                        <form action="" id="joinForm" class="create-form">
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" id="firstname" name='firstname' placeholder="first name" />
-                            </div>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control" type="text" id="lastname" name='lastname' placeholder="last name" />
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input class="form-control" type="text" id="firstname" name='firstname' placeholder="First Name" />
                             </div>
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input class="form-control" type="text" id="email" name='email' placeholder="email" />
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input class="form-control" type="text" id="lastname" name='lastname' placeholder="Last Name" />
                             </div>
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input class="form-control" type="password" id="password2" name='password' placeholder="password" />
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input class="form-control" type="text" id="gender" name='gender' placeholder="Gender" />
                             </div>
-                            <div class="form-group">
-                                <select class="form-control" id="genderSelect" name="Gender">
-                                    <option><span class="glyphicon glyphicon-user"></span>Male</option>
-                                    <option>Female</option>
-                                </select>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                </span>
+                                <input class="form-control" type="text" id="email" name='email' placeholder="Email" />
                             </div>
-                            <div class="form-group">
-                                <button type="button" id="joinB" class="btn btn-def btn-block">Join!</button>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input class="form-control" type="password" id="password2" name='password' placeholder="Password" />
                             </div>
+                            <!-- <div class="form-group"></div> -->
+                            <button type="submit" id="joinB" class="btn btn-def btn-block">Join!</button>
+                            <!-- </div> -->
                         </form>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end of row -->
+
     </div>
     <!-- end of container -->
+
+
     <!-- Modal -->
     <div class="container">
+
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
+
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modTitle"><span class="color-red">Did you weigh yourself today?</span></h3>
+
+                        <h3 class="modTitle">
+                            <span class="color-red">Did you weigh yourself today?</span>
+                        </h3>
                     </div>
+
                     <div class="modal-body" style="padding:40px 50px;">
                         <form role="form" id="modal-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="date" placeholder="Date">
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="weight" placeholder="Weight?">
                             </div>
@@ -128,10 +156,15 @@
                             <button type="submit" class="btn btn-block" id="enterData">Enter Data</button>
                         </form>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
+
+
+
     <footer class="container-fluid custom-footer clearfix">
         <div class="row">
             <div class="col-md-4">
@@ -162,7 +195,13 @@
                     <ul class="color-white small">
                         <li class="list-unstyled footer-size">Links</li>
                         <ul class="list-inline">
-                            <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>
+                            <li class="list-unstyled">
+                                <a href="https://github.com/Fitness-Tracker/Fitness-Tracker">
+                                    <span class="color-white">
+                                        <i class="fa fa-github-square custom-icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </ul>
                 </div>
@@ -173,17 +212,21 @@
         <!-- end row -->
     </footer>
     <!-- end container fluid custom footer -->
+
     <script>
-    $(document).ready(function() {
-        $("#loginB").click(function() {
-            $("#myModal").modal();
-        });
-        $("#joinB").click(function() {
-            $("#myModal").modal();
-        });
-
-
-    });
+        // $(document).ready(function () {
+            // $("#loginB").click(function () {
+            //     $("#myModal").modal();
+            // });
+            // $("#joinB").click(function () {
+            //     $("#myModal").modal();
+            // });
+        // });
+        // $(document).ready(function () {
+        //     $("#enterData").click(function () {
+        //         window.location.href = 'dataEntry.html';
+        //     })
+        // });
     </script>
 </body>
 

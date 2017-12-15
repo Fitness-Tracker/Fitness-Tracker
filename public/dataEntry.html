@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <title>iFittracker</title>
+    <title>iFitTracker</title>
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="assets/images/plate.png" height="32px" width="32px">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
     <!-- certain animations for pics <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +25,10 @@
                 <img id="trainer1" src="assets/images/trainer1.png" />
             </div>
             <div class="col-md-4">
-                <h1 class="title"><span class="color-white">i</span><span class="color-red">Fittracker</span></h1>
+                <h1 class="title">
+                    <span class="color-white">i</span>
+                    <span class="color-red">Fittracker</span>
+                </h1>
             </div>
             <div class="col-md-4">
                 <img id="trainer2" src="assets/images/trainer2.png" />
@@ -37,6 +41,10 @@
             <div class="well well-lg">
                 <form action="" id="dataEntry">
                     <div class="form-group">
+                        <div class="form-group">
+                            <label for="Date">Date:</label>
+                            <input class="form-control" type="text" id="workoutdate" name='workoutdate' placeholder="Date of Workout" />
+                        </div>
                         <label for="sel1">Exercise:</label>
                         <select class="form-control" id="sel1" name="Exercise">
                             <option>Bench</option>
@@ -57,13 +65,16 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-def btn-block" id="submit">Enter Data</button>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-def btn-block" id="chartIt">Chart Data</button>
-                    </div>
+
                 </form>
             </div>
             <!--end of well -->
         </div>
+
+        <div class="form-group">
+                <button type="button" class="btn btn-def btn-block" id="charts">Go to Charts</button>
+        </div>
+
         <!--end of row-->
         <div class="row">
             <h2>Your Workout History</h2>
@@ -112,10 +123,16 @@
                     </tr>
                 </tbody>
             </table>
+
+
         </div>
         <!--ends row-->
     </div>
     <!--end of container-->
+
+
+
+
     <footer class="container-fluid custom-footer clearfix">
         <div class="row">
             <div class="col-md-4">
@@ -146,7 +163,13 @@
                     <ul class="color-white small">
                         <li class="list-unstyled footer-size">Links</li>
                         <ul class="list-inline">
-                            <li class="list-unstyled"><a href="https://github.com/Fitness-Tracker/Fitness-Tracker"><span class="color-white"><i class="fa fa-github-square custom-icon" aria-hidden="true"></i></span></a></li>
+                            <li class="list-unstyled">
+                                <a href="https://github.com/Fitness-Tracker/Fitness-Tracker">
+                                    <span class="color-white">
+                                        <i class="fa fa-github-square custom-icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </ul>
                 </div>
@@ -158,5 +181,11 @@
     </footer>
     <!-- end container fluid custom footer -->
 </body>
-
+<script>
+        $(document).ready(function () {
+            $("#charts").click(function () {
+                window.location.href = 'charts.html';
+            })
+        });
+    </script>
 </html>
