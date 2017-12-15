@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="assets/js/chartdata.js"></script>
 </head>
 
@@ -40,15 +41,10 @@
         <div class="form-group">
             <button type="submit" class="btn btn-def btn-block" id="weightChart">My Weight Chart</button>
         </div>
-
-        <!--charts-->
-        <canvas>
-
-
-        </canvas>
-
-
-
+        <div class="container">
+            <!--charts-->
+            <canvas id="myChart" height="300" width="400"></canvas>
+        </div>
     </div>
     <footer class="container-fluid custom-footer clearfix">
         <div class="row">

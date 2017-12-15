@@ -1,5 +1,5 @@
 var express = require('express');
-var path = require('path')
+var path = require('path');
 var router = express.Router();
 var fitness = require('../models/fitness_models.js');
 
@@ -77,8 +77,7 @@ router.post("/workoutdata", function (req, res) {
       req.body.reps
     ], function (result) {
       console.log("workoutData route completed");
-      
-    });
+  });
 })
 
 // Route to get user Weight Data for Charts
@@ -90,21 +89,8 @@ router.post("/weightChartData", function (req, res) {
       req.body.userid
     ], function (result) {
       console.log("weightChartData route completed");
-      console.log(result)
-      // Result is an Array of Objects.  Objects have property of db table column names
-      // Loop through the array.
-      // Get value of date and weight.
-      // Push into a new Array (weightLabels, weightValues)
-      // Use the Arrays as the values for charts.
-      var weightLabels = [];
-      var weightValues = [];
-      for (var i =0; i < result.length; i++) {
-        weightLabels.push(result[i].date);
-        weightValues.push(result[i].weight)
-      }
-      console.log(weightLabels);
-      console.log(weightValues);
-      // var loginID = result[0].user_id;
+      console.log(result);
+      res.json(result);
       })
     });
 

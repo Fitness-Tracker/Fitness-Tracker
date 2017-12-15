@@ -7,8 +7,9 @@ $().ready(function () {
         console.log("On click registered to submit workout data");
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
+        var loggedInUserID = sessionStorage.getItem("loggedInUserID");
         var workoutRecord = {
-            userid: 1,   // Logged in UserID
+            userid: loggedInUserID,   // Logged in UserID
             date: $("#workoutdate").val().trim(),
             exercise: $("#sel1").val().trim(),
             weight: $("#load").val().trim(),
