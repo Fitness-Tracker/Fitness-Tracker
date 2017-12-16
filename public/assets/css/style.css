@@ -41,9 +41,8 @@ div.jumbotron {
 }
 
 .title {
-    margin-top: 15%;
-    margin-left: 5%;
     font-family: 'Vollkorn SC', serif;
+    text-align: center;
 }
 
 h3.modTitle {
@@ -125,15 +124,14 @@ h3.modTitle {
     }
 }
 
-@media only screen and (max-width: 992px) and (min-width: 561px) {
-    #trainer1 {
-        margin-left: 40%;
-    }
-    .title {
+@media only screen and (max-width: 1024px) and (min-width: 561px) {
+    
+
+#trainer1 {
         display: none;
     }
 
-    #trainer2 {
+#trainer2 {
         display: none;
     }
 }
