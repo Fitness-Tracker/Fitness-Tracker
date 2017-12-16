@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require("body-parser");
 
+//for heroku app
 var port = process.env.PORT || 8080;
 
 var app = express();

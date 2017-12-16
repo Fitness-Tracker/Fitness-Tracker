@@ -6,17 +6,18 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 
-connection = mysql.createConnection({
-  port: 3306,
-  host: "localhost",
-  user: "eric",
-  password: "password",
-  database: "fitness_tracker"
-});
+  connection = mysql.createConnection({
+    port: 3306,
+    host: "localhost",
+    user: "eric",
+    password: "password",
+    database: "fitness_tracker"
+  });
 }
 
+
 // Make connection.
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
